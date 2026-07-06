@@ -453,6 +453,8 @@ a.badge:hover { color: var(--gold); border-color: var(--gold); }
   color: var(--navy);
 }
 
+.signup-status { font-size: 16px; font-weight: 600; color: var(--navy); margin: -4px 0 12px; }
+
 .fine-print { font-size: 12.5px; line-height: 1.5; color: #2a3324; }
 
 .site-footer {
