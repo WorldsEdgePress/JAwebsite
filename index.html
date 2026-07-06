@@ -177,7 +177,7 @@
         const data = await res.json();
         if (data.success) {
           hlForm.hidden = true;
-          status.textContent = 'Welcome to Heartlines! You\'re on the list.';
+          status.textContent = 'Almost there — check your inbox for a confirmation email!';
         } else {
           status.textContent = 'That didn\'t go through — double-check the email and try again.';
         }
