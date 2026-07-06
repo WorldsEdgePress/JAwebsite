@@ -253,6 +253,24 @@ button.badge:hover { color: var(--gold); border-color: var(--gold); }
 
 .soon-card h3 { font-size: 24px; color: var(--gold-soft); margin-bottom: 8px; }
 
+.soon-card.featured { border-style: solid; border-color: rgba(243, 205, 93, 0.5); }
+
+.soon-cover {
+  display: block;
+  width: 150px;
+  margin: 0 auto 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(161, 143, 99, 0.5);
+}
+
+.next-tag {
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
 .soon-card p { font-size: 16px; color: var(--mist); font-style: italic; }
 
 .soon-note { text-align: center; font-size: 17px; color: var(--mist); }
@@ -287,22 +305,22 @@ button.badge:hover { color: var(--gold); border-color: var(--gold); }
 
 .about-text p + p { margin-top: 18px; }
 
-.newsletter { padding: 40px 6vw 100px; }
+.newsletter { padding: 30px 6vw 80px; }
 
 .newsletter-panel {
-  max-width: 640px;
+  max-width: 520px;
   margin: 0 auto;
   background: var(--green);
   border-radius: 10px;
-  padding: 42px 40px;
+  padding: 26px 28px;
   text-align: center;
 }
 
-.newsletter-panel h2 { color: var(--navy); margin-bottom: 10px; }
+.newsletter-panel h2 { color: var(--navy); font-size: 24px; margin-bottom: 6px; }
 
-.newsletter-panel > p { color: var(--navy); font-size: 18px; margin-bottom: 24px; }
+.newsletter-panel > p { color: var(--navy); font-size: 16px; margin-bottom: 16px; }
 
-.signup { display: flex; gap: 10px; max-width: 440px; margin: 0 auto 20px; }
+.signup { display: flex; gap: 10px; max-width: 400px; margin: 0 auto 14px; }
 
 .signup input {
   flex: 1;
@@ -315,7 +333,7 @@ button.badge:hover { color: var(--gold); border-color: var(--gold); }
   color: var(--navy);
 }
 
-.fine-print { font-size: 14px; line-height: 1.55; color: #2a3324; }
+.fine-print { font-size: 12.5px; line-height: 1.5; color: #2a3324; }
 
 .site-footer {
   text-align: center;
