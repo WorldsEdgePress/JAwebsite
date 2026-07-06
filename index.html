@@ -37,47 +37,55 @@
     <section id="books" class="books celestial">
       <h2>Books available now</h2>
 
+      <div class="filter-bar" role="group" aria-label="Browse by series or genre">
+        <button class="filter-chip active" data-filter="all">All books</button>
+        <button class="filter-chip" data-filter="hot-lemonade">Hot Lemonade series</button>
+        <button class="filter-chip" data-filter="paranormal">Paranormal romance</button>
+        <button class="filter-chip" data-filter="regency">Fantasy regency</button>
+        <button class="filter-chip" data-filter="standalone">Standalones</button>
+      </div>
+
       <div class="book-grid">
 
-        <article class="book-card">
+        <article class="book-card" data-tags="hot-lemonade paranormal">
           <a href="https://www.amazon.com/dp/B0FHFJ5VS8" target="_blank" rel="noopener">
             <div class="cover" style="background:#343451">
               <img src="assets/covers/the-space-between.jpg" alt="Cover of The Space Between" onerror="this.remove()">
               <span class="cover-fallback">The Space Between</span>
             </div>
           </a>
-          <p class="series-tag">Hot Lemonade series · Book 1</p>
+          <button class="series-tag" data-filter="hot-lemonade">Hot Lemonade series · Book 1</button>
           <h3>The Space Between</h3>
           <p class="blurb">A fire elemental. A frost elemental. A touch that's off-limits — and a connection neither can freeze out. Elemental magic collides with forbidden longing.</p>
-          <p class="badges"><span class="badge">MM paranormal romance</span> <span class="badge ku">Free on Kindle Unlimited</span></p>
+          <p class="badges"><button class="badge" data-filter="paranormal">MM paranormal romance</button> <span class="badge ku">Free on Kindle Unlimited</span></p>
           <a class="button gold" href="https://www.amazon.com/dp/B0FHFJ5VS8" target="_blank" rel="noopener">Read on Amazon</a>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" data-tags="hot-lemonade paranormal">
           <a href="https://www.amazon.com/dp/B0GJNG5XVZ" target="_blank" rel="noopener">
             <div class="cover" style="background:#5d2b4f">
               <img src="assets/covers/forbidden-fruit.jpg" alt="Cover of Forbidden Fruit" onerror="this.remove()">
               <span class="cover-fallback">Forbidden Fruit</span>
             </div>
           </a>
-          <p class="series-tag">Hot Lemonade series · Book 2</p>
+          <button class="series-tag" data-filter="hot-lemonade">Hot Lemonade series · Book 2</button>
           <h3>Forbidden Fruit</h3>
           <p class="blurb">The Hot Lemonade series returns — another sizzling standalone where heart and heat go hand in hand, and love always finds a way.</p>
-          <p class="badges"><span class="badge">MM paranormal romance</span> <span class="badge ku">Free on Kindle Unlimited</span></p>
+          <p class="badges"><button class="badge" data-filter="paranormal">MM paranormal romance</button> <span class="badge ku">Free on Kindle Unlimited</span></p>
           <a class="button gold" href="https://www.amazon.com/dp/B0GJNG5XVZ" target="_blank" rel="noopener">Read on Amazon</a>
         </article>
 
-        <article class="book-card">
+        <article class="book-card" data-tags="standalone regency">
           <a href="https://www.amazon.com/dp/B0BLSV1HH6" target="_blank" rel="noopener">
             <div class="cover" style="background:#45328c">
               <img src="assets/covers/the-dukes-christmas-consort.jpg" alt="Cover of The Duke's Christmas Consort" onerror="this.remove()">
               <span class="cover-fallback">The Duke's Christmas Consort</span>
             </div>
           </a>
-          <p class="series-tag">Standalone holiday story</p>
+          <button class="series-tag" data-filter="standalone">Standalone holiday story</button>
           <h3>The Duke's Christmas Consort</h3>
           <p class="blurb">A fake engagement. A duke. A holiday in a fantasy world inspired by the regency era — where pretending has a way of becoming real.</p>
-          <p class="badges"><span class="badge">Fantasy regency romance</span> <span class="badge ku">Free on Kindle Unlimited</span></p>
+          <p class="badges"><button class="badge" data-filter="regency">Fantasy regency romance</button> <span class="badge ku">Free on Kindle Unlimited</span></p>
           <a class="button gold" href="https://www.amazon.com/dp/B0BLSV1HH6" target="_blank" rel="noopener">Read on Amazon</a>
         </article>
 
@@ -132,6 +140,21 @@
     <p>Contact: <a href="mailto:Jesse@JesseAlexanderBooks.com">Jesse@JesseAlexanderBooks.com</a></p>
     <p class="copyright">© 2026 Jesse Alexander. All rights reserved.</p>
   </footer>
+
+  <script>
+    const chips = document.querySelectorAll('.filter-chip');
+    const cards = document.querySelectorAll('.book-card');
+    function applyFilter(tag) {
+      chips.forEach(c => c.classList.toggle('active', c.dataset.filter === tag));
+      cards.forEach(card => {
+        const show = tag === 'all' || card.dataset.tags.split(' ').includes(tag);
+        card.style.display = show ? '' : 'none';
+      });
+    }
+    document.querySelectorAll('[data-filter]').forEach(el => {
+      el.addEventListener('click', () => applyFilter(el.dataset.filter));
+    });
+  </script>
 
 </body>
 </html>
