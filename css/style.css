@@ -227,6 +227,13 @@ a.series-tag { display: inline-block; text-decoration: none; }
 
 .blurb { font-size: 17px; color: var(--mist); flex-grow: 1; }
 
+.hook {
+  font-style: italic;
+  font-size: 17.5px;
+  color: var(--gold-soft);
+  margin: 2px 0 8px;
+}
+
 .badges { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .badge {
