@@ -209,6 +209,16 @@ section h2 {
 
 .series-tag:hover { color: var(--gold); text-decoration: underline; }
 
+a.series-tag { display: inline-block; text-decoration: none; }
+
+.series-tag-static {
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--tan);
+  margin-top: 6px;
+}
+
 .book-card h3 { font-size: 26px; color: var(--cream); }
 
 .blurb { font-size: 17px; color: var(--mist); flex-grow: 1; }
@@ -230,9 +240,76 @@ button.badge { cursor: pointer; }
 
 button.badge:hover { color: var(--gold); border-color: var(--gold); }
 
+a.badge { text-decoration: none; }
+
+a.badge:hover { color: var(--gold); border-color: var(--gold); }
+
 .badge.ku { color: var(--navy); background: var(--gold); border-color: var(--gold); }
 
 .book-card .button { align-self: flex-start; margin-top: 4px; }
+
+.page-hero { text-align: center; padding: 56px 6vw 20px; }
+
+.page-hero h1 {
+  font-size: clamp(34px, 6vw, 52px);
+  color: var(--gold);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.breadcrumb { margin-bottom: 20px; font-size: 15px; }
+
+.breadcrumb a { color: var(--tan); text-decoration: none; }
+
+.breadcrumb a:hover { color: var(--gold); }
+
+.book-grid.two-up { max-width: 740px; }
+
+.book-grid.one-up { max-width: 360px; }
+
+.freebies-section { padding: 60px 6vw 70px; }
+
+.freebie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  max-width: 760px;
+  margin: 0 auto 26px;
+}
+
+.freebie-card {
+  text-align: center;
+  background: var(--indigo);
+  border: 1px solid rgba(161, 143, 99, 0.4);
+  border-radius: 8px;
+  padding: 28px 24px;
+}
+
+.freebie-card h3 { font-size: 23px; color: var(--gold-soft); margin-bottom: 10px; }
+
+.freebie-card p { font-size: 16px; color: var(--mist); margin-bottom: 16px; }
+
+.freebie-card .next-tag { margin-bottom: 8px; }
+
+.soon-strip {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 640px;
+  margin: 44px auto 0;
+  background: #2a2939;
+  border: 1px solid rgba(243, 205, 93, 0.5);
+  border-radius: 8px;
+  padding: 20px 26px;
+}
+
+.soon-strip .soon-cover { width: 110px; margin: 0; flex-shrink: 0; }
+
+.soon-strip h3 { font-size: 24px; color: var(--gold-soft); margin-bottom: 6px; }
+
+.soon-strip p { font-size: 16px; color: var(--mist); }
+
+.soon-strip a { color: var(--gold); }
 
 .coming-soon { padding: 70px 6vw; background-color: #2a2939; }
 
