@@ -263,9 +263,40 @@ a.badge:hover { color: var(--gold); border-color: var(--gold); }
 
 .breadcrumb a:hover { color: var(--gold); }
 
-.book-grid.two-up { max-width: 740px; }
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
 
-.book-grid.one-up { max-width: 360px; }
+.book-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: var(--indigo);
+  border: 1px solid rgba(161, 143, 99, 0.4);
+  border-radius: 8px;
+  padding: 20px 22px;
+}
+
+.row-cover {
+  display: block;
+  width: 140px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.book-row h3 { font-size: 24px; color: var(--cream); margin: 2px 0 8px; }
+
+.book-row .blurb { font-size: 16px; margin-bottom: 12px; }
+
+.book-row .badges { margin-bottom: 14px; }
+
+@media (max-width: 560px) {
+  .book-row { flex-direction: column; align-items: center; text-align: center; }
+}
 
 .freebies-section { padding: 60px 6vw 70px; }
 
