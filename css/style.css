@@ -482,6 +482,11 @@ a.badge:hover { color: var(--gold); border-color: var(--gold); }
 
 .site-footer .copyright { font-size: 14px; color: var(--tan); margin-top: 10px; }
 
+main > section[class] {
+  padding-left: max(6vw, calc((100% - 980px) / 2));
+  padding-right: max(6vw, calc((100% - 980px) / 2));
+}
+
 @media (max-width: 560px) {
   .signup { flex-direction: column; }
   .hero { padding-top: 80px; }
