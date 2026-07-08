@@ -486,3 +486,15 @@ a.badge:hover { color: var(--gold); border-color: var(--gold); }
   .signup { flex-direction: column; }
   .hero { padding-top: 80px; }
 }
+
+@media (max-width: 640px) {
+  .site-header { padding: 12px 4vw 10px; justify-content: center; }
+  .wordmark { width: 100%; text-align: center; font-size: 21px; }
+  .site-header nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+  }
+  .site-header nav a { font-size: 14.5px; white-space: nowrap; }
+}
