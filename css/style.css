@@ -325,9 +325,16 @@ a.badge:hover { color: var(--gold); border-color: var(--gold); }
   .book-detail h1 { text-align: center; }
 }
 
-.book-card h3 a, .book-row h3 a { color: inherit; text-decoration: none; }
+.more-link {
+  display: inline-block;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: var(--tan);
+  text-decoration: none;
+  margin-top: 10px;
+}
 
-.book-card h3 a:hover, .book-row h3 a:hover { color: var(--gold); }
+.more-link:hover { color: var(--gold); text-decoration: underline; }
 
 .book-list {
   display: flex;
