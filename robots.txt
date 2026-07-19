@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://worldsedgechris.github.io/JAwebsite/sitemap.xml
