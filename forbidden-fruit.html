@@ -64,7 +64,11 @@
     <section class="books celestial book-page">
       <p class="breadcrumb"><a href="hot-lemonade.html">← Hot Lemonade series</a></p>
       <div class="book-detail">
-        <img class="detail-cover" src="assets/covers/forbidden-fruit.jpg" alt="Cover of Forbidden Fruit">
+        <div class="cover-stage">
+          <div class="device-frame float-anim">
+            <img class="detail-cover" src="assets/covers/forbidden-fruit.jpg" alt="Cover of Forbidden Fruit">
+          </div>
+        </div>
         <div>
           <p class="series-tag-static">Hot Lemonade series · Book 2</p>
           <h1>Forbidden Fruit</h1>
@@ -80,7 +84,7 @@
       </div>
     </section>
 
-    <section class="freebies-section celestial">
+    <section class="freebies-section celestial fade-up">
       <h2>Free bonus scenes for this book</h2>
       <div class="freebie-grid">
         <div class="freebie-card">
@@ -101,12 +105,20 @@
       <p class="soon-note"><a href="freebies.html">See all freebies →</a></p>
     </section>
 
-    <section class="world-teaser celestial">
+    <section class="world-teaser celestial fade-up">
       <h2>More from this world</h2>
       <p>Art, extras, and behind-the-scenes secrets from the Hot Lemonade world will live here. <a href="index.html#newsletter">Join the Heartlines newsletter</a> to hear when they arrive.</p>
     </section>
 
   </main>
+
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    fadeEls.forEach(el => io.observe(el));
+  </script>
 
   <footer class="site-footer">
     <p class="footer-name">Jesse Alexander</p>
