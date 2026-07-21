@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=4">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -120,7 +120,8 @@
 
     <section class="world-teaser damask fade-up">
       <h2>More from this world</h2>
-      <p>Art, extras, and behind-the-scenes secrets from the Duke's world will live here. <a href="index.html#newsletter">Join the Heartlines newsletter</a> to hear when they arrive.</p>
+      <video class="world-video" id="world-video" muted loop playsinline preload="none" data-src="assets/video/consort-world.mp4" aria-label="Animated scene from The Duke's Christmas Consort"></video>
+      <p>More art and extras from the Duke's world are on the way. <a href="index.html#newsletter">Join the Heartlines newsletter</a> to hear when they arrive.</p>
     </section>
 
   </main>
@@ -131,6 +132,18 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.15 });
     fadeEls.forEach(el => io.observe(el));
+
+    const vid = document.getElementById('world-video');
+    const vio = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !vid.src) {
+          vid.src = vid.dataset.src;
+          vid.play().catch(() => {});
+          vio.unobserve(vid);
+        }
+      });
+    }, { rootMargin: '300px' });
+    vio.observe(vid);
   </script>
 
   <footer class="site-footer">

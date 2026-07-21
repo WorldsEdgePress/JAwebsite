@@ -380,6 +380,15 @@ a.badge:hover { color: var(--gold); border-color: var(--gold); }
 
 .world-teaser { text-align: center; padding-top: 30px; padding-bottom: 80px; }
 
+.world-video {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(161, 143, 99, 0.4);
+}
+
 .world-teaser p { max-width: 560px; margin: 0 auto; font-size: 17px; color: var(--mist); }
 
 .world-teaser a { color: var(--gold); }
