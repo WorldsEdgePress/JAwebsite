@@ -452,6 +452,17 @@ a.badge:hover { color: var(--gold); border-color: var(--gold); }
   padding: 20px 22px;
 }
 
+a.book-row {
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+a.book-row:hover {
+  border-color: rgba(243, 205, 93, 0.7);
+  transform: translateY(-3px);
+}
+
 .row-cover {
   display: block;
   width: 140px;
