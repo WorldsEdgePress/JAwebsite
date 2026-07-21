@@ -103,6 +103,10 @@
 
     <section class="world-teaser celestial fade-up">
       <h2>More from this world</h2>
+      <div class="video-wrap">
+        <video class="world-video" id="world-video" muted loop playsinline preload="none" data-src="assets/video/space-between-world.mp4" aria-label="Animated scene from The Space Between"></video>
+        <button class="video-toggle" id="video-toggle" aria-label="Pause animation">❚❚</button>
+      </div>
       <p>Art, extras, and behind-the-scenes secrets from the Hot Lemonade world will live here. <a href="index.html#newsletter">Join the Heartlines newsletter</a> to hear when they arrive.</p>
     </section>
 
@@ -114,6 +118,29 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.15 });
     fadeEls.forEach(el => io.observe(el));
+
+    const vid = document.getElementById('world-video');
+    const toggle = document.getElementById('video-toggle');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const vio = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !vid.src) {
+          vid.src = vid.dataset.src;
+          if (!reduceMotion) { vid.play().catch(() => {}); } else { setPaused(true); }
+          vio.unobserve(vid);
+        }
+      });
+    }, { rootMargin: '300px' });
+    vio.observe(vid);
+
+    function setPaused(paused) {
+      toggle.textContent = paused ? '▶' : '❚❚';
+      toggle.setAttribute('aria-label', paused ? 'Play animation' : 'Pause animation');
+    }
+    toggle.addEventListener('click', () => {
+      if (vid.paused) { vid.play().catch(() => {}); setPaused(false); }
+      else { vid.pause(); setPaused(true); }
+    });
   </script>
 
   <footer class="site-footer">
