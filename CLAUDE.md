@@ -93,5 +93,7 @@ fantasy-regency, sci-fi-fantasy, jessealexanderbooks/ (old QR codes — keep).
 
 ## Accessibility (she cares — keep these)
 - No faint text on dark or gold backgrounds: bump weight/size/contrast instead.
+- Text on GOLD surfaces (buttons, ku badges, active chips, ribbon) is near-black
+  #14131d at weight 700 — never plain navy, she flagged it as hard to read.
 - Every animation pausable; prefers-reduced-motion respected everywhere.
 - Alt text on all covers; aria-labels on icon-only controls.
