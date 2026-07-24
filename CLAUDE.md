@@ -61,7 +61,10 @@ fantasy-regency, sci-fi-fantasy, jessealexanderbooks/ (old QR codes — keep).
 2. **ASIN exists (preorder open)**: add gold "Preorder on Amazon" button above the
    callout; move the book INTO the home "Books available now" grid with a
    "Preorder · releases <date>" badge; remove from coming-soon spots. Add sameAs
-   (Amazon URL) to the page's JSON-LD.
+   (Amazon URL) to the page's JSON-LD. Add the series filter chip on home if new
+   series. Slap the PREORDER ribbon on its covers: wrap the cover img in
+   `<span class="ribbon-wrap">` + `<span class="ribbon">Preorder</span>` (remove
+   ribbon on release day).
 3. **Release day**: badge → "Free on Kindle Unlimited", button → "Read on Amazon",
    delete the callout. "Available now" always means clickable-and-buyable TODAY.
 
