@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=12">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -79,6 +79,8 @@
         <button class="filter-chip" data-filter="regency">Regency</button>
         <button class="filter-chip" data-filter="standalone">Standalones</button>
       </div>
+
+      <p class="filter-page-link" id="filter-page-link" hidden><a href=""></a></p>
 
       <div class="book-grid">
 
@@ -189,12 +191,26 @@
   <script>
     const chips = document.querySelectorAll('.filter-chip');
     const cards = document.querySelectorAll('.book-card');
+    const filterPages = {
+      'hot-lemonade': ['hot-lemonade.html', 'Visit the Hot Lemonade series page →'],
+      'paranormal': ['paranormal-romance.html', 'Visit the paranormal romance page →'],
+      'regency': ['regency.html', 'Visit the regency romance page →']
+    };
+    const pageLink = document.getElementById('filter-page-link');
     function applyFilter(tag) {
       chips.forEach(c => c.classList.toggle('active', c.dataset.filter === tag));
       cards.forEach(card => {
         const show = tag === 'all' || card.dataset.tags.split(' ').includes(tag);
         card.style.display = show ? '' : 'none';
       });
+      if (filterPages[tag]) {
+        pageLink.hidden = false;
+        const a = pageLink.querySelector('a');
+        a.href = filterPages[tag][0];
+        a.textContent = filterPages[tag][1];
+      } else {
+        pageLink.hidden = true;
+      }
     }
     document.querySelectorAll('[data-filter]').forEach(el => {
       el.addEventListener('click', () => applyFilter(el.dataset.filter));

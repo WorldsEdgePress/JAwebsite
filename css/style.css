@@ -154,6 +154,12 @@ section h2 {
   font-weight: 600;
 }
 
+.filter-page-link { text-align: center; margin: -26px 0 36px; font-size: 16.5px; font-weight: 600; }
+
+.filter-page-link a { color: var(--gold); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+
+.filter-page-link a:hover { border-bottom-style: solid; }
+
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
