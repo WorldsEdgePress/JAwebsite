@@ -603,7 +603,9 @@ a.book-row:hover {
 
 .ribbon-wrap { position: relative; display: inline-block; overflow: hidden; border-radius: 4px; }
 
-.ribbon-wrap .ribbon {
+.book-row .ribbon-wrap { flex-shrink: 0; }
+
+.ribbon {
   position: absolute;
   top: 18px;
   left: -38px;
