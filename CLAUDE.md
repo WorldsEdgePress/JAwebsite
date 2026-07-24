@@ -4,6 +4,9 @@ Author site for the pen name Jesse Alexander (owner: Charissa; explain in plain
 English, she approves each change in real time). Live at https://jessealexanderbooks.com
 via GitHub Pages (repo WorldsEdgePress/JAwebsite). Workflow: edit → commit → push
 immediately; changes are live in ~1 minute; verify live with curl after pushing.
+If a change doesn't appear, check `gh api repos/WorldsEdgePress/JAwebsite/pages/builds/latest`
+— builds can fail/queue. The `.nojekyll` file in the root disables Jekyll processing
+(builds were failing without it) — NEVER delete it.
 NEVER put this folder inside Dropbox (Dropbox corrupts git).
 
 ## Design tokens
