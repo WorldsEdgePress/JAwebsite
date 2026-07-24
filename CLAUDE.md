@@ -52,6 +52,19 @@ fantasy-regency, sci-fi-fantasy, jessealexanderbooks/ (old QR codes — keep).
 6. **Metadata upkeep**: add the page to sitemap.xml and llms.txt.
 7. Commit + push; curl the live URLs to verify; have her refresh and approve.
 
+## Preorder lifecycle (template: Wolfsbane, July 2026)
+1. **Announced, not yet buyable**: coming-soon card (release-date tag, "Preorder is
+   coming soon", More-about link) + full book page with `.preorder-callout` (gold
+   bordered box: "Preorder opens soon — special price until release day <date>" +
+   Heartlines link). Badge slot shows "Releases <date>" instead of KU. Trope star
+   bullets (`.trope-list`) welcome on book pages.
+2. **ASIN exists (preorder open)**: add gold "Preorder on Amazon" button above the
+   callout; move the book INTO the home "Books available now" grid with a
+   "Preorder · releases <date>" badge; remove from coming-soon spots. Add sameAs
+   (Amazon URL) to the page's JSON-LD.
+3. **Release day**: badge → "Free on Kindle Unlimited", button → "Read on Amazon",
+   delete the callout. "Available now" always means clickable-and-buyable TODAY.
+
 ## Videos / animations
 - One animation per page, max. Placement: the book page's "More from this world".
 - Pattern: `.video-wrap > video.world-video` (muted loop playsinline preload="none",

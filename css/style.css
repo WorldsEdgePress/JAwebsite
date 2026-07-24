@@ -377,6 +377,26 @@ a.badge:hover { color: var(--gold); border-color: var(--gold); }
 
 .book-detail .badges { margin: 18px 0 20px; }
 
+.preorder-callout {
+  margin-top: 6px;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+  background: rgba(243, 205, 93, 0.09);
+  padding: 14px 18px;
+  font-size: 17.5px;
+  font-weight: 600;
+  color: var(--gold-soft);
+  line-height: 1.55;
+}
+
+.preorder-callout a { color: var(--gold); }
+
+.trope-list { list-style: none; margin: 16px 0 0; padding: 0; }
+
+.trope-list li { font-size: 16.5px; color: var(--mist); padding-left: 26px; position: relative; margin-bottom: 6px; }
+
+.trope-list li::before { content: "★"; position: absolute; left: 0; color: var(--gold); }
+
 .formats-note { font-size: 15px; color: var(--tan); margin-top: 12px; }
 
 .world-teaser { text-align: center; padding-top: 30px; padding-bottom: 80px; }
