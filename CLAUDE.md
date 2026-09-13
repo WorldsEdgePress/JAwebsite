@@ -21,7 +21,8 @@ NEVER put this folder inside Dropbox (Dropbox corrupts git).
   `sed -i 's|style.css?v=N|style.css?v=N+1|g' *.html`
 
 ## Page inventory
-index.html (home) · book pages: the-space-between, forbidden-fruit,
+index.html (home) · bookshelf.html (every cover in a tablet frame on CSS shelf
+planks, newest first, NO ribbons/badges/text — hover shows the title) · book pages: the-space-between, forbidden-fruit,
 the-dukes-christmas-consort, wolfsbane, bite-me-its-halloween (standalone, paranormal shelf) · series: hot-lemonade · genres: fantasy, regency,
 paranormal-romance, futuristic (PURE shelves — the Duke lives on regency only; his
 "Fantasy regency" badge is a flavor label) · freebies.html · redirect stubs:
@@ -52,8 +53,10 @@ fantasy-regency, sci-fi-fantasy, jessealexanderbooks/ (old QR codes — keep).
    sells; the whole card is the click). Remove the book from coming-soon spots.
 5. **New series/genre?** Add a filter chip on home; a new genre gets its own page
    (shelves stay pure). Remaining brand genres when needed: erotic, contemporary.
-6. **Metadata upkeep**: add the page to sitemap.xml and llms.txt.
-7. Commit + push; curl the live URLs to verify; have her refresh and approve.
+6. **Bookshelf**: add a `.shelf-item` to bookshelf.html at the FRONT of the grid
+   (newest first). Plain cover in a `.device-frame`, no ribbon.
+7. **Metadata upkeep**: add the page to sitemap.xml and llms.txt.
+8. Commit + push; curl the live URLs to verify; have her refresh and approve.
 
 ## Preorder lifecycle (template: Wolfsbane, July 2026)
 1. **Announced, not yet buyable**: coming-soon card (release-date tag, "Preorder is

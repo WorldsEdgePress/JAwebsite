@@ -23,6 +23,7 @@
 ## Browse
 
 - [All books](https://jessealexanderbooks.com/)
+- [Bookshelf](https://jessealexanderbooks.com/bookshelf.html): every cover on one shelf, each linking to its book page
 - [Hot Lemonade series](https://jessealexanderbooks.com/hot-lemonade.html)
 - [Mate or Madness series](https://jessealexanderbooks.com/mate-or-madness.html)
 - [Paranormal romance](https://jessealexanderbooks.com/paranormal-romance.html)

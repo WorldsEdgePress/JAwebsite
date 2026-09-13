@@ -735,3 +735,100 @@ main > section[class] {
   }
   .site-header nav a { font-size: 14.5px; white-space: nowrap; }
 }
+
+/* Bookshelf page — every cover in its tablet frame, resting on a hint of a shelf */
+.shelf { padding: 10px 6vw 96px; --shelf-w: 134px; --shelf-row: 266px; --shelf-plank: 36px; }
+
+/* the shelf may run a little wider than the 980px text column */
+main > section.shelf {
+  padding-left: max(6vw, calc((100% - 1120px) / 2));
+  padding-right: max(6vw, calc((100% - 1120px) / 2));
+}
+
+.shelf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--shelf-w));
+  grid-auto-rows: var(--shelf-row);
+  justify-content: center;
+  align-items: end;
+  column-gap: 30px;
+  padding: 0 28px;
+  max-width: calc(5 * var(--shelf-w) + 4 * 30px + 56px); /* five jewels per shelf, plank overhangs a little */
+  margin: 0 auto;
+  /* one plank per row, drawn just under where each tablet stands */
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(var(--shelf-row) - var(--shelf-plank)),
+      rgba(161, 143, 99, 0.55) calc(var(--shelf-row) - var(--shelf-plank)),
+      rgba(161, 143, 99, 0.32) calc(var(--shelf-row) - var(--shelf-plank) + 9px),
+      rgba(0, 0, 0, 0.35) calc(var(--shelf-row) - var(--shelf-plank) + 9px),
+      transparent calc(var(--shelf-row) - var(--shelf-plank) + 30px),
+      transparent var(--shelf-row)
+    );
+}
+
+.shelf-item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: var(--cream);
+}
+
+.shelf-item::before {
+  content: "";
+  position: absolute;
+  inset: -26px -26px 30px;
+  background: radial-gradient(circle, rgba(243, 205, 93, 0.14), transparent 68%);
+  pointer-events: none;
+}
+
+.shelf-item .device-frame {
+  padding: 6px 6px 16px;
+  border-radius: 13px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.shelf-item .device-frame::after { width: 22px; height: 3px; bottom: 6px; }
+
+.shelf-item img { display: block; width: 100%; border-radius: 6px; }
+
+.shelf-item:hover .device-frame,
+.shelf-item:focus-visible .device-frame {
+  transform: translateY(-8px);
+  box-shadow: 0 26px 48px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(243, 205, 93, 0.5);
+}
+
+.shelf-item:focus-visible { outline: none; }
+
+.shelf-title {
+  height: var(--shelf-plank);
+  padding-top: 13px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.3px;
+  color: var(--gold-soft);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shelf-item:hover .shelf-title,
+.shelf-item:focus-visible .shelf-title { opacity: 1; }
+
+@media (hover: none) {
+  .shelf-title { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shelf-item .device-frame { transition: none; }
+  .shelf-item:hover .device-frame { transform: none; }
+}
+
+@media (max-width: 560px) {
+  .shelf { --shelf-w: 104px; --shelf-row: 218px; }
+  .shelf-grid { column-gap: 14px; padding: 0 6px; max-width: calc(3 * var(--shelf-w) + 2 * 14px + 12px); }
+}
