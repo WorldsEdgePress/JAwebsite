@@ -22,7 +22,7 @@ NEVER put this folder inside Dropbox (Dropbox corrupts git).
 
 ## Page inventory
 index.html (home) · book pages: the-space-between, forbidden-fruit,
-the-dukes-christmas-consort · series: hot-lemonade · genres: fantasy, regency,
+the-dukes-christmas-consort, wolfsbane, bite-me-its-halloween (standalone, paranormal shelf) · series: hot-lemonade · genres: fantasy, regency,
 paranormal-romance, futuristic (PURE shelves — the Duke lives on regency only; his
 "Fantasy regency" badge is a flavor label) · freebies.html · redirect stubs:
 fantasy-regency, sci-fi-fantasy, jessealexanderbooks/ (old QR codes — keep).
@@ -72,7 +72,7 @@ fantasy-regency, sci-fi-fantasy, jessealexanderbooks/ (old QR codes — keep).
    (keep the StoryOrigin universal link as href), delete the callout, update the
    page's meta/og descriptions from "Releases <date>" to "Out now", move the llms.txt
    entry from Preorder to Books. Ribbon text flips Preorder → **New**.
-4. **The New ribbon** (her convention, Aug 2026): the newest released book wears the
+4. **The New ribbon** (her convention, Aug 2026; current holder: Bite Me, It's Halloween, Sept 2026): the newest released book wears the
    gold "New" ribbon on its covers sitewide. When the next book releases (or goes to
    preorder), it takes the ribbon and the previous holder's ribbon-wrap/ribbon markup
    is removed. Exactly one ribbon-wearer at a time.
