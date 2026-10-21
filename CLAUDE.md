@@ -1,6 +1,6 @@
 # jessealexanderbooks.com — site conventions
 
-Author site for the pen name Jesse Alexander (owner: Charissa; explain in plain
+Author site for the pen name Jesse Alexander (explain in plain
 English, she approves each change in real time). Live at https://jessealexanderbooks.com
 via GitHub Pages (repo WorldsEdgePress/JAwebsite). Workflow: edit → commit → push
 immediately; changes are live in ~1 minute; verify live with curl after pushing.
@@ -23,8 +23,9 @@ NEVER put this folder inside Dropbox (Dropbox corrupts git).
 ## Page inventory
 index.html (home) · bookshelf.html (every cover in a tablet frame on CSS shelf
 planks, newest first, NO ribbons/badges/text — hover shows the title) · book pages: the-space-between, forbidden-fruit,
-the-dukes-christmas-consort, wolfsbane, bite-me-its-halloween (standalone, paranormal shelf) · series: hot-lemonade · genres: fantasy, regency,
-paranormal-romance, futuristic (PURE shelves — the Duke lives on regency only; his
+the-dukes-christmas-consort, wolfsbane, bite-me-its-halloween (standalone, paranormal shelf),
+accidentally-inheriting-a-duke-at-christmas (standalone, regency shelf) · series: hot-lemonade · genres: fantasy, regency,
+paranormal-romance, futuristic (PURE shelves — both Christmas duke books live on regency only; his
 "Fantasy regency" badge is a flavor label) · freebies.html · redirect stubs:
 fantasy-regency, sci-fi-fantasy, jessealexanderbooks/ (old QR codes — keep).
 
@@ -75,13 +76,18 @@ fantasy-regency, sci-fi-fantasy, jessealexanderbooks/ (old QR codes — keep).
    (keep the StoryOrigin universal link as href), delete the callout, update the
    page's meta/og descriptions from "Releases <date>" to "Out now", move the llms.txt
    entry from Preorder to Books. Ribbon text flips Preorder → **New**.
-4. **The New ribbon** (her convention, Aug 2026; current holder: Bite Me, It's Halloween, Sept 2026): the newest released book wears the
+4. **The New ribbon** (her convention, Aug 2026; current holder: Accidentally Inheriting a Duke at Christmas, Oct 2026): the newest released book wears the
    gold "New" ribbon on its covers sitewide. When the next book releases (or goes to
    preorder), it takes the ribbon and the previous holder's ribbon-wrap/ribbon markup
    is removed. Exactly one ribbon-wearer at a time.
 5. **The "Working on / coming soon" section** (home, renamed Aug 2026): each
    soon-card carries a status `.next-tag` — "Coming in <month>" when a release window
    exists, "Working on" for WIPs; the nearest release gets the `featured` card style.
+
+## Newsletter assets
+- Images and download files used in a Heartlines email live in `assets/newsletter/<year>-<n>/`
+  (e.g. `assets/newsletter/2026-8/`), so the email can point at them. Push BEFORE the
+  email sends, or its pictures and download button break.
 
 ## Videos / animations
 - One animation per page, max. Placement: the book page's "More from this world".
