@@ -45,6 +45,8 @@ fantasy-regency, sci-fi-fantasy, jessealexanderbooks/ (old QR codes — keep).
    - freebies section with that book's freebies; "More from this world" `.world-teaser`
      (add her video when she provides one — see Videos below).
    - `.fade-up` on lower sections + the IntersectionObserver script block.
+   - the GoatCounter visitor-counter line just before `</body>` (copies across with the page;
+     stats at https://jessealexanderbooks.goatcounter.com, login jesse@jessealexanderbooks.com).
 3. **Home page**: add a `.book-card` to the grid — cover links to book page,
    `data-tags` for series/genre/standalone filters, hook + one-line blurb, badges,
    Amazon button AND "More about this book →" link (home keeps buy buttons).
@@ -58,6 +60,11 @@ fantasy-regency, sci-fi-fantasy, jessealexanderbooks/ (old QR codes — keep).
    (newest first). Plain cover in a `.device-frame`, no ribbon.
 7. **Metadata upkeep**: add the page to sitemap.xml and llms.txt.
 8. Commit + push; curl the live URLs to verify; have her refresh and approve.
+9. **Tell Google** (release day): she opens Google Search Console in a private window
+   signed in as Jesse (jesse@jessealexanderbooks.com), pastes the new book page's full
+   URL into the top "Inspect any URL" bar, presses Enter, clicks REQUEST INDEXING.
+   (Site registered with Google Search Console + Bing Webmaster Tools 10 Nov 2026;
+   verification file googlee4a28444e7adb619.html in the root — NEVER delete it.)
 
 ## Preorder lifecycle (template: Wolfsbane, July 2026)
 1. **Announced, not yet buyable**: coming-soon card (release-date tag, "Preorder is
